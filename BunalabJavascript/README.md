@@ -1,7 +1,7 @@
 # BunalabJs
 ## Install BunalabJs
 ```
- npm install mqtt --save
+ npm install BunalabJs --save
 ```
 ## Exmaple BunalabJs
 ```
