@@ -11,7 +11,7 @@ setuptools.setup(
     description="A package Bunalab-System",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/bluebox-dev/libFTP",
+    url="https://github.com/bluebox-dev/Bunalab_Platform/tree/master/BunalabPython",
     packages=setuptools.find_packages(),
     install_requires=[
           'paho-mqtt',
