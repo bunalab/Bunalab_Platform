@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="BunalabPy",
-    version="0.1",
+    version="0.2",
     author="blueboxdev",
     author_email="thanakorn.vsalab@gmail.com",
     description="A package Bunalab-System",
