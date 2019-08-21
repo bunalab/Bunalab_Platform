@@ -21,9 +21,9 @@ class Service(object):
         msg = { 
             "database": self.username,
             "data":[{
-                "measurement":table,
+                "measurement":str(table),
                 "tags":{
-                    "tag" : tag,
+                    "tag" : str(tag),
             },
             "fields": {
                     "value": value
@@ -38,19 +38,19 @@ class Service(object):
         if not isinstance(value,str) :
             value = float(value)
         msg = { 
-                    "database": self.username,
-                    "data":[{
-                        "measurement":str(table),
-                        "tags":{
-                            "tag" : tag,
-                            "latitude": str(lat),
-                            "longitude": str(longt),
-                    },
-                    "fields": {
-                            "value": value
-                        }
-                    }]
+                "database": self.username,
+                "data":[{
+                    "measurement":str(table),
+                    "tags":{
+                        "tag" : str(tag),
+                        "latitude": str(lat),
+                        "longitude": str(longt),
+                },
+                "fields": {
+                        "value": value
                 }
+            }]
+        }
         msg =json.dumps(msg)
         self.Client.publish(topic="/"+self.username, payload=msg)
 
