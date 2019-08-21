@@ -16,6 +16,8 @@ class Service(object):
 
     # Send json
     def SendDB(self,table,tag,value):
+        if not isinstance(value,str) :
+            value = float(value)
         msg = { 
             "database": self.username,
             "data":[{
@@ -33,6 +35,8 @@ class Service(object):
 
     # Send Map
     def SendMap(self,table,lat,longt,tag,value):
+        if not isinstance(value,str) :
+            value = float(value)
         msg = { 
                     "database": self.username,
                     "data":[{
